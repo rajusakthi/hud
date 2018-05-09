@@ -96,7 +96,7 @@ $(document).ready(function () {
                 $('#counter').text(curval + 1);
             }
             if (curval1 <= 1280) {
-                $('#counter1').text(sdf_FTS((curval1 + 20), 0, ' '));
+                $('#counter1').text(sdf_FTS((curval1 + 20), 0, ''));
             }
             if (curval2 <= 145) {
                 $('#counter2').text(curval2 + 1);
