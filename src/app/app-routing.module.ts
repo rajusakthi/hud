@@ -10,11 +10,12 @@ const appRoutes: Routes = [
     { path:'', redirectTo: 'main', pathMatch:'full' },
     { path: 'main', component: MainPageComponent},
     { path: 'login', component: LoginPageComponent},
+    { path: 'submitCss', redirectTo: '/submit', pathMatch:'full'},
     { path: 'submit', component: SubmitPageComponent}
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes,{onSameUrlNavigation: 'reload'}) ],
+    imports: [RouterModule.forRoot(appRoutes) ],
     exports: [RouterModule]
 })
 

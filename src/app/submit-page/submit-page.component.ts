@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTabsModule} from '@angular/material/tabs';
+import { HouseService } from '../house.service';
+import { House }    from '../shared/models/house.model';
 
 
 
@@ -10,11 +12,20 @@ import {MatTabsModule} from '@angular/material/tabs';
 })
 export class SubmitPageComponent implements OnInit {
 
-  constructor() {
-    
+  model=new House();
+  houseService:HouseService;
+
+  constructor(private myHouseService: HouseService) {
+    this.houseService=myHouseService;
    }
 
   ngOnInit() {
   }
+
+  newHouse() {
+    //console.log(this.model);
+    this.houseService.saveHouse(this.model);
+  }
+  
 
 }
